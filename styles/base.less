@@ -1,0 +1,327 @@
+@import "syntax-variables";
+
+atom-text-editor,
+:host {
+	background-color: @syntax-background-color;
+	color: @syntax-text-color;
+
+	.wrap-guide {
+		background-color: @syntax-wrap-guide-color;
+	}
+
+	.indent-guide {
+		color: @syntax-indent-guide-color;
+	}
+
+	.invisible-character {
+		color: @syntax-invisible-character-color;
+	}
+
+	.gutter {
+		background-color: @syntax-gutter-background-color;
+		color: @syntax-gutter-text-color;
+
+		.line-number {
+			&.cursor-line {
+				background-color: @syntax-gutter-background-color-selected;
+				color: @syntax-gutter-text-color-selected;
+			}
+
+			&.cursor-line-no-selection {
+				color: @syntax-gutter-text-color-selected;
+			}
+		}
+	}
+
+	.gutter .line-number.folded,
+	.gutter .line-number:after,
+	.fold-marker:after {
+		color: @base05;
+	}
+
+	.invisible {
+		color: @syntax-text-color;
+	}
+
+	.cursor {
+		color: @syntax-cursor-color;
+	}
+
+	.selection .region {
+		background-color: @syntax-selection-color;
+	}
+}
+
+atom-text-editor .search-results .marker .region,
+:host .search-results .marker .region {
+	background-color: transparent;
+	border: 1px solid @syntax-result-marker-color;
+}
+
+atom-text-editor .search-results .marker.current-result .region,
+:host .search-results .marker.current-result .region {
+	border: 1px solid @syntax-result-marker-color-selected;
+}
+
+.comment {
+	color: @base03;
+}
+
+.entity {
+	&.name.type {
+		color: @base0C;
+	}
+
+	&.other.inherited-class {
+		color: @base0B;
+	}
+}
+
+.keyword {
+	color: @base0E;
+
+	&.control {
+		color: @base0E;
+	}
+
+	&.operator {
+		color: @syntax-text-color;
+	}
+
+	&.other.special-method {
+		color: @base0D;
+	}
+
+	&.other.unit {
+		color: @base09;
+	}
+}
+
+.storage {
+	color: @base0E;
+}
+
+.constant {
+	color: @base09;
+
+	&.character.escape {
+		color: @base0C;
+	}
+
+	&.numeric {
+		color: @base09;
+	}
+
+	&.css.definition,
+	&.scss.definition,
+	&.less,
+	&.other.color {
+		color: @base0C;
+	}
+
+	&.other.symbol {
+		color: @base0B;
+	}
+}
+
+.less {
+
+	.constant {
+
+		&.other {
+			color: @base0C;
+		}
+	}
+}
+
+.variable {
+	color: @base08;
+
+	&.interpolation {
+		color: darken(@base08, 10%);
+	}
+
+	&.parameter.function {
+		color: @syntax-text-color;
+	}
+}
+
+.invalid.illegal {
+	background-color: @base08;
+	color: @syntax-background-color;
+}
+
+.string {
+	color: @base0B;
+
+
+	&.regexp {
+		color: @base0C;
+
+		.source.ruby.embedded {
+			color: @base09;
+		}
+	}
+
+	&.other.link {
+		color: @base08;
+	}
+}
+
+.punctuation {
+	&.definition {
+		&.comment {
+			color: @base03;
+		}
+
+		&.string,
+		&.variable,
+		&.parameters,
+		&.array {
+			color: @syntax-text-color;
+		}
+
+		&.heading,
+		&.identity {
+			color: @base0D;
+		}
+
+		&.bold {
+			color: @base0A;
+			font-weight: bold;
+		}
+
+		&.italic {
+			color: @base0E;
+			font-style: italic;
+		}
+	}
+
+	&.function {
+		color: @syntax-text-color;
+	}
+
+	&.section.embedded {
+		color: @base09;
+	}
+
+}
+
+.support {
+	&.class {
+		color: @base0A;
+	}
+
+	&.function  {
+		color: @base0C;
+
+		&.any-method {
+			color: @base0D;
+		}
+	}
+}
+
+.entity {
+	&.name.function {
+		color: @base0D;
+	}
+
+	&.name.class, &.name.type.class {
+		color: @base0A;
+	}
+
+	&.name.section {
+		color: @base0D;
+	}
+
+	&.name.tag {
+		color: @base08;
+	}
+
+	&.other.attribute-name {
+		color: @base09;
+
+		&.id {
+			color: @base0D;
+		}
+	}
+}
+
+.meta {
+	&.class {
+		color: @base0A;
+	}
+
+	&.link {
+		color: @base09;
+	}
+
+	&.require {
+		color: @base0D;
+	}
+
+	&.selector {
+		color: @base0E;
+	}
+
+	&.separator {
+		background-color: @base03;
+		color: @syntax-text-color;
+	}
+}
+
+.none {
+	color: @syntax-text-color;
+}
+
+.markup {
+	&.bold {
+		color: @base09;
+		font-weight: bold;
+	}
+
+	&.changed {
+		color: @base0E;
+	}
+
+	&.deleted {
+		color: @base08;
+	}
+
+	&.italic {
+		color: @base0E;
+		font-style: italic;
+	}
+
+	&.heading .punctuation.definition.heading {
+		color: @base0D;
+	}
+
+	&.inserted {
+		color: @base0B;
+	}
+
+	&.list {
+		color: @base08;
+	}
+
+	&.quote {
+		color: @base09;
+	}
+
+	&.raw.inline {
+		color: @base0B;
+	}
+}
+
+.source.gfm .markup {
+	-webkit-font-smoothing: auto;
+	&.heading {
+		color: @base0B;
+	}
+}
+
+atom-text-editor[mini] .scroll-view,
+:host([mini]) .scroll-view {
+	padding-left: 1px;
+}
