@@ -1,3 +1,11 @@
-## 0.2.0 - First Release
+## 0.2.2
 
-## 0.2.1 - Fixed entity punctuation styling
+Changed gutter to match the main background color.
+
+## 0.2.1
+
+Fixed entity punctuation styling
+
+## 0.2.0
+
+First Release
