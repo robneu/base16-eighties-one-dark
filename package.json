@@ -1,7 +1,7 @@
 {
   "name": "base16-eighties-one-dark",
   "theme": "syntax",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "A base16 eighies dark syntax theme for the one dark UI theme.",
   "repository": "https://github.com/robneu/base16-eighties-one-dark",
   "license": "MIT",
